@@ -28,7 +28,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, mean_squared_error, r2_score
 from sklearn.metrics import confusion_matrix 
 from PIL import Image
-image = Image.open('cover.jpg')
+image = Image.open('Ml_image_1.jpg')
 matplotlib.use("Agg")
 
 
