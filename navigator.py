@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import webbrowser
+import webbrowser
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
@@ -12,8 +12,11 @@ def check_hashes(password,hashed_text):
         return hashed_text
     return False
 # DB Management
-import sqlite3 
-conn = sqlite3.connect('data.db')
+#import sqlite3 
+#conn = sqlite3.connect('data.db')
+import mysql.connector as sql
+conn=sql.connect(password='sunny',host='localhost',user='root',database='mypasswords')
+
 c = conn.cursor()
 # DB  Functions
 def create_usertable():
@@ -63,8 +66,12 @@ def main():
 
 
                 st.success("Logged In as {}".format(username))
-                st.write("WELCOME AUTO ML WEB APP.PLEASE CLICK THE FOLLOWING LINK TO USE THE  APP")
-                st.write("https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py")
+                url = 'https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py'
+                if st.button('OPEN APP'):
+                    webbrowser.open_new_tab(url)
+                
+                #st.write("WELCOME AUTO ML WEB APP.PLEASE CLICK THE FOLLOWING LINK TO USE THE  APP")
+                #st.write("https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py")
             
             else:
                 st.warning("Incorrect Username/Password")
