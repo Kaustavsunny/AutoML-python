@@ -12,10 +12,10 @@ def check_hashes(password,hashed_text):
         return hashed_text
     return False
 # DB Management
-#import sqlite3 
-#conn = sqlite3.connect('data.db')
-import mysql.connector as sql
-conn=sql.connect(password='sunny',host='localhost',user='root',database='mypasswords')
+import sqlite3 
+conn = sqlite3.connect('data.db')
+#import mysql.connector as sql
+#conn=sql.connect(password='sunny',host='localhost',user='root',database='mypasswords')
 
 c = conn.cursor()
 # DB  Functions
@@ -24,11 +24,11 @@ def create_usertable():
 
 
 def add_userdata(username,password):
-    c.execute('INSERT INTO userstable(username,password) VALUES (%s,%s)',(username,password))
+    c.execute('INSERT INTO userstable(username,password) VALUES (?,?)',(username,password))
     conn.commit()
 
 def login_user(username,password):
-    c.execute('SELECT * FROM userstable WHERE username =%s AND password = %s',(username,password))
+    c.execute('SELECT * FROM userstable WHERE username =? AND password = ?',(username,password))
     data = c.fetchall()
     return data
 
