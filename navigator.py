@@ -66,12 +66,12 @@ def main():
 
 
                 st.success("Logged In as {}".format(username))
-                #url = 'https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py'
+                url = 'https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py'
                 #if st.button('OPEN APP'):
                 #    webbrowser.open_new_tab(url)
-                
-                st.write("WELCOME AUTO ML WEB APP.PLEASE CLICK THE FOLLOWING LINK TO USE THE  APP")
-                st.write("https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py")
+                st.markdown("WELCOME TO AUTOML APP: [OPEN APP](%s)" % url)
+                #st.write("WELCOME AUTO ML WEB APP.PLEASE CLICK THE FOLLOWING LINK TO USE THE  APP")
+                #st.write("https://share.streamlit.io/kaustavsunny/automl-python/main/app1.py")
             
             else:
                 st.warning("Incorrect Username/Password")
