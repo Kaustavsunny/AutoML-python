@@ -433,11 +433,11 @@ def main():
     
     st.info("This Web Application is made by using STREAMLIT*")
      
-    activities = [" EDA"," Linear Models","Auto Model Building"]	
+    activities = ["General EDA "," EDA For Linear Models","Auto Model Building"]	
     choice = st.sidebar.selectbox("Select Activities",activities)
 
 
-    if choice == 'EDA':
+    if choice == 'General EDA':
         st.subheader("Exploratory Data Analysis")
 
         data = st.file_uploader("Upload a Dataset", type=["csv"])
@@ -583,7 +583,7 @@ def main():
                 st.write(dataframe.wordcloud(df))
                 st.pyplot()
 
-    elif choice == 'Linear Models':
+    elif choice == 'EDA For Linear Models':
         st.subheader("EDA For Linear Models")
         data = st.file_uploader("Upload a Dataset", type=["csv"])
         if data is not None:
