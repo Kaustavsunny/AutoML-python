@@ -429,11 +429,11 @@ class Data_Base_Modelling():
 
 #st.image(image, use_column_width=True)   
 def main():
-    st.title("AUTOMATED ML WEB APP")
+    st.title("Machine Learning Application for Automated EDA")
     
-    st.info("This Web Application is made by using STREAMLIT*")
-     
-    activities = ["General EDA "," EDA For Linear Models","Auto Model Building"]	
+    st.info("This Web Application is created and maintained by *Kaustav Chatterjee*")
+    ##"""https://github.com/DheerajKumar97""" 
+    activities = ["General EDA","EDA For Linear Models","Auto Model Building"]	
     choice = st.sidebar.selectbox("Select Activities",activities)
 
 
