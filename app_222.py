@@ -437,7 +437,7 @@ def main():
     choice = st.sidebar.selectbox("Select Activities",activities)
 
 
-    if choice == 'General EDA':
+    if choice == 'EDA':
         st.subheader("Exploratory Data Analysis")
 
         data = st.file_uploader("Upload a Dataset", type=["csv"])
@@ -583,7 +583,7 @@ def main():
                 st.write(dataframe.wordcloud(df))
                 st.pyplot()
 
-    elif choice == 'EDA For Linear Models':
+    elif choice == 'Linear Models':
         st.subheader("EDA For Linear Models")
         data = st.file_uploader("Upload a Dataset", type=["csv"])
         if data is not None:
