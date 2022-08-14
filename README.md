@@ -8,3 +8,8 @@ The idea is that doing any kind of task related to machine learning involves a w
 ## Technology 
 - For database **sqlite3** has been used.
 - **sha256** algorithm has been used for encrypsion purpose in login page.
+
+## Demo Link
+
+This project has been  deployed in streamlit. You can check it out by using the follwing link:\
+https://kaustavsunny-automl-python-app-222-atsl4m.streamlitapp.com/
