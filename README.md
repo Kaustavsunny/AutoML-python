@@ -13,7 +13,7 @@ The idea is that doing any kind of task related to machine learning involves a w
 
 ## Technology 
 - For database **sqlite3** has been used.
-- **sha256** algorithm has been used for encrypsion purpose in login page.
+- **sha256** algorithm has been used for encryption purpose in login page.
 
 ## Demo 
 
